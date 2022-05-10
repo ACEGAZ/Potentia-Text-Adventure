@@ -867,3 +867,47 @@ def option_lie():
         else:
             print("Please select a valid choice.")
             choice = input(">>> ")
+
+
+def story_part_2():
+    """
+    function to start the second part of the story
+    """
+    global enemy
+    enemy = Enemy("Soldier, Razik")
+
+    print("You make your way through Jatorri city. The city is a marvel of\n"
+          "Human ingenuity. The city is built into a canyon and supended\n"
+          "above it. The city is connected by huge suspension bridges.\n"
+          "\n"
+          "You eventually make it to Teslora's house and knock on the\n"
+          "door...\n"
+          "\n")
+    time.sleep(5)
+    print("There is no answer...\n"
+          "\n")
+    time.sleep(5)
+    print("You look at the door lock and notice that it is broken\n"
+          "You slowly push the door open to reveal Tesloras' corpse.\n"
+          "\n"
+          "The room is covered in blood and Teslora is slumped in\n"
+          "her chair with a bloody note stuck into her body.\n"
+          "\n"
+          "What do you do?\n"
+          "\n"
+          "A: Search the room?\n"
+          "B: Read the bloody note?\n"
+          "C: Find a member of the Jatorri city gaurd to report a murder?\n")
+
+    choice = input(">>> ")
+
+    while True:
+        if choice in answer_A:
+            option_search()
+        elif choice in answer_B:
+            read_bloody_note()
+        elif choice in answer_C:
+            find_gaurd()
+        else:
+            print("Please select a valid choice.")
+            choice = input(">>> ")
