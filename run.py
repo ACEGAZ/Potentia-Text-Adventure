@@ -1790,3 +1790,31 @@ def story_part_3():
         else:
             print("Please type the correct word.")
             choice = input(">>> ")
+
+
+def end():
+    """
+    function for end game credits and to restart the game.
+    """
+    print("congratulations on reaching the end!\n"
+          "\n"
+          "I hope you enjoyed my game!\n"
+          "\n"
+          "This game was written and coded by\n"
+          "Gary Lowles.\n"
+          "\n"
+          "The game was tested by:\n"
+          "Rachel Lowles\n"
+          "Charlotte Aling-Case\n"
+          "lysette Reed\n"
+          "Aaron Harvey\n"
+          "Dale Millward\n"
+          "Natalie March\n"
+          "Emma Skinner\n"
+          "\n"
+          "Thanks for playing.\n"
+          "\n")
+    start_menu()
+
+
+start_menu()
