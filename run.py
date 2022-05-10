@@ -289,6 +289,7 @@ def enemy_melee_combat():
         print("The " + enemy.name + " missed you with its melee attack\n")
         time.sleep(2)
 
+
 def enemy_magic_roll():
     """
     returns a random number between 1 and 6 for enemy magic attack
@@ -312,3 +313,22 @@ def enemy_magic_combat():
     else:
         print("The enemy missed you with its magic attack\n")
         time.sleep(2)
+
+
+def enemy_attack_choice_roll():
+    """
+    returns a random number between 1 and 6 for enemy attack choice
+    """
+    while True:
+        enemy_attack_or_magic_choice_generator = random.randint(1, 6)
+        return enemy_attack_or_magic_choice_generator
+
+
+def enemy_attack_choice():
+    """
+    decides which attack the enemy will use.
+    """
+    if enemy_attack_choice_roll() <= 4:
+        enemy_melee_combat()
+    elif enemy_attack_choice_roll() >= 5:
+        enemy_magic_combat()
