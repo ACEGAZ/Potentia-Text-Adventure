@@ -1532,3 +1532,145 @@ def option_capture():
         else:
             print("Please select a valid choice?\n")
             choice = input(">>> ")
+
+
+def option_escape():
+    """
+    function if player escapes.
+    """
+    print("You manage to get away from the house but\n"
+          "but hear a man from behind you shout\n"
+          "'over there, they're escaping!'\n"
+          "\n"
+          "Gaurds and solders start running after you.\n"
+          "\n"
+          "What do you do\n"
+          "A: Take to the rooftops?\n"
+          "B: Head for the back alleys?")
+    choice = input(">>> ")
+
+    while True:
+        if choice in answer_A:
+            print("You climb up a window ledge and get to\n"
+                  "the rooftops. You jump from rooftop to rooftop\n"
+                  "and lose all but one of the solders.\n"
+                  "\n"
+                  "You see a 10 ft gap up ahead!\n"
+                  "\n"
+                  "do you jump?\n"
+                  "Yes:\n"
+                  "No:\n"
+                  "\n")
+            choice = input(">>> ")
+            while True:
+                if choice in yes:
+                    time.sleep(2)
+                    print("You jump the gap! You land on the other\n"
+                          "side and continue running")
+                    time.sleep(2)
+                    print("The soldier chasing you leaps the gap!"
+                          "You get a good look at him. He is a\n"
+                          "Fulger with a look of determination in\n"
+                          "his eyes!\n"
+                          "\n"
+                          "He starts casting bolts of lightning at you\n"
+                          "What do you do?\n"
+                          "A: Stop and fight the soldier?\n"
+                          "B: Jump the 20 ft drop to the street below?\n"
+                          "\n")
+                    choice = input(">>> ")
+                    while True:
+
+                        if choice in answer_A:
+                            print("You stop and stand your ground!\n"
+                                  "prepare to fight!!!")
+                            time.sleep(2)
+                            combat_encounter_capture_or_escape()
+                        elif choice in answer_B:
+                            print("You jump to the ground below and\n"
+                                  "manage to not break your legs! The\n"
+                                  "soldier hesitates and you manage\n"
+                                  "to escape.\n"
+                                  "\n")
+                            story_part_3()
+                        else:
+                            print("Please select a valid choice")
+                            choice = input(">>> ")
+
+                elif choice in no:
+                    time.sleep(2)
+                    print("You can't bring yourself to jump\n"
+                          "You stop running and are quickly taken\n"
+                          "down by the solder! He handcuffs you and\n"
+                          "takes you in.")
+                    option_capture()
+
+                else:
+                    print(f"Please type {yes} or {no}.\n")
+                    choice = input(">>> ")
+
+        elif choice in answer_B:
+            print("You head into the back alleys.\n"
+                  "They twist and turn. Eventually\n"
+                  "you come to a fork.\n"
+                  "What do you do?\n"
+                  "\n"
+                  "A: Go left?\n"
+                  "B: Go right?\n"
+                  "\n")
+            choice = input(">>> ")
+            while True:
+                if choice in answer_A:
+                    print("You take the left path.\n"
+                          "The path leads to a dead\n"
+                          "end. Gaurds quickly find\n"
+                          "you and take you down!\n"
+                          "\n")
+                    option_capture()
+                elif choice in answer_B:
+                    print("You take the right path.\n"
+                          "The alley comes to an end\n"
+                          "and you come out at a small\n"
+                          "square that leads to a\n"
+                          "suspension bridge.\n"
+                          "\n"
+                          "You run across the bridge.\n"
+                          "You get half way across before\n"
+                          "you notice that some guards have\n"
+                          "followed you!\n"
+                          "\n"
+                          "What do you do?\n"
+                          "A: Shake the bridge?\n"
+                          "B: Carry on running?\n"
+                          "\n")
+                    choice = input(">>> ")
+                    while True:
+                        if choice in answer_A:
+                            print("You shake the bridge from left\n"
+                                  "to right! The gaurds have\n"
+                                  "trouble hanging on and fall\n"
+                                  "over the sides! you take this\n"
+                                  "chance and manage to escape\n"
+                                  "completely.\n"
+                                  "\n")
+                            story_part_3()
+                        elif choice in answer_B:
+                            print("You carry on run but it is\n"
+                                  "difficult to get your footing\n"
+                                  "now that so many people are on\n"
+                                  "the bridge\n"
+                                  "\n"
+                                  "The gaurds eventually manage to catch\n"
+                                  "you and you are taken in.\n"
+                                  "\n")
+                            option_capture()
+                        else:
+                            print("Please select a valid choice")
+                        choice = input(">>> ")
+
+                else:
+                    print("Please select a valid choice")
+                    choice = input(">>> ")
+        else:
+            print("Please select a valid choice?")
+            choice = input(">>> ")
