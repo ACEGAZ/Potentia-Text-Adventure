@@ -288,3 +288,27 @@ def enemy_melee_combat():
     else:
         print("The " + enemy.name + " missed you with its melee attack\n")
         time.sleep(2)
+
+def enemy_magic_roll():
+    """
+    returns a random number between 1 and 6 for enemy magic attack
+    """
+    while True:
+        enemy_magic = random.randint(1, 6)
+        return enemy_magic
+
+
+def enemy_magic_combat():
+    """
+    computer magic combat engine for game
+    """
+    print("The " + enemy.name + " tries to hit you with a magic attack\n")
+    time.sleep(2)
+    if enemy_magic_roll() >= 5:
+        reduce_player_health_magic()
+        print("The " + enemy.name + " hit you with a magic attack!"
+              f" You have {PLAYER_HEALTH} hit points left""\n")
+        time.sleep(2)
+    else:
+        print("The enemy missed you with its magic attack\n")
+        time.sleep(2)
