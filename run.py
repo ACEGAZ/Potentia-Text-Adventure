@@ -432,3 +432,220 @@ def combat_encounter_capture_or_escape():
             PLAYER_HEALTH = 10
             ENEMY_HEALTH = 8
             option_capture()
+
+
+def start_menu():
+    """
+    start menu for game
+    """
+    reset_race()
+
+    print("Welcome to Potentia text adventure!\n"
+          "\n"
+          "Potentia is a static world built on magic.\n"
+          "Magic makes the world move and change.\n"
+          "Even the sun (known as the Vatra) is made\n"
+          "everyday by 200 casters channeling magic.\n"
+          "to produce a ball of fire to light the world.\n"
+          "Without it the world would be dark!\n"
+          "\n"
+          "In this game\n"
+          "You will be given choices or a yes or no question\n"
+          "Your choice will change the story as it plays.\n"
+          "You will be given a choice of race which will\n"
+          "change certian aspects of the game.\n"
+          "\n"
+          "Have fun!!!\n"
+          "\n")
+    race = input("choose your race...\n"
+                 "A: Vahser\n"
+                 "B: Mortem\n"
+                 "C: Bascula\n"
+                 "D: Hemmel\n"
+                 "E: Human\n"
+                 "F: Arratoi\n"
+                 "G: Fulger\n"
+                 "\n"
+                 ">>>"
+                 )
+
+    global character_name
+    character_name = input("Please name your character>>> ")
+
+    while True:
+
+        if race in answer_A:
+            global RACE_ONE
+            RACE_ONE = "Vahser"
+            print(f"you have chosen a {RACE_ONE} called {character_name}""\n"
+                  "\n"
+                  "The Vahser are an all female race that stand at\n"
+                  "about 5 ft. The live in impressive cities under the sea\n"
+                  "and use aqua magic to keep there cities in huge bubbles\n"
+                  "They are very beautiful and can have any colour hair\n"
+                  "but it is always dark in colour.\n"
+                  "\n"
+                  "Vahser use daggers, Aqua and shadow magic and can seduce"
+                  " most men with ease.\n"
+                  "\n")
+            time.sleep(2)
+            print(f"Do you want to play a {RACE_ONE} called {character_name}?"
+                  "\n"
+                  "yes:\n"
+                  "no:")
+            start_game()
+
+        elif race in answer_B:
+            global RACE_TWO
+            RACE_TWO = "Mortem"
+            print(f"you have chosen a {RACE_TWO} called {character_name}""\n"
+                  "\n"
+                  "The Mortem are an undead race that live on a frozen\n"
+                  "island to the north. They are skeletal in looks and vary\n"
+                  "in size. Depending on what race they were in life\n"
+                  "They are completely dependant on sensory magic to\n"
+                  "emmulate all their senses as they have no eyes,\n"
+                  "skin, ears, ect"
+                  "\n"
+                  "The Mortem have to hide their skelital appearnce as they\n"
+                  "are sworn enemies of all the other races due to the war\n"
+                  "of the undead over a thousand years ago."
+                  " The mortem haven't been seen in a long time but\n"
+                  "the other races haven't forgotten the war\n"
+                  "\n"
+                  "The Mortem are very differnt these days and seek peace\n"
+                  "they use scythe weapons, Sensory and Cryo magic\n"
+                  "\n")
+            time.sleep(2)
+            print(f"Do you want to play a {RACE_TWO} called {character_name}?"
+                  "\n"
+                  "yes:\n"
+                  "no:")
+            start_game()
+
+        elif race in answer_C:
+            global RACE_THREE
+            RACE_THREE = "Bascula"
+            print(f"you have chosen a {RACE_THREE} called {character_name}""\n"
+                  "\n"
+                  "The Bascula are a race of reptilian craftsmen and\n"
+                  "businessman. They stand 8 to 10 feet tall and craft\n"
+                  "most of the weapons in Potentia.\n"
+                  "They live in Volcanoes and are completely immune to fire.\n"
+                  "\n"
+                  "Bascula use large hammers called vasara's, Pyro\n"
+                  "and Hardening magic.\n"
+                  "Their large size intimidates most people\n"
+                  "\n")
+            time.sleep(2)
+            print(f"Do you want to play a {RACE_THREE} "
+                  f"called {character_name}?"
+                  "\n"
+                  "yes:\n"
+                  "no:")
+            start_game()
+
+        elif race in answer_D:
+            global RACE_FOUR
+            RACE_FOUR = "Hemmel"
+            print(f"you have chosen a {RACE_FOUR} called {character_name}""\n"
+                  "\n"
+                  "The Hemmel are a genderless race that reproduce by\n"
+                  "splitting their cells. they stand about 6ft tall\n"
+                  "and usually use thier Telekenetic magic to leveitate\n"
+                  "rather than walk. Hemmel bodies have no bones so they are\n"
+                  "physically the weakest race in Potentia, however\n"
+                  "they make up for this with thier vast intelligence and\n"
+                  "logical thinking. They live in a floating city,\n"
+                  "high in the sky."
+                  "\n"
+                  "Hemmel use their Telekinesis magic to wield weapons"
+                  " as well as creation and zephyr magic\n"
+                  "\n")
+            time.sleep(2)
+            print(f"Do you want to play a {RACE_FOUR} called {character_name}?"
+                  "\n"
+                  "yes:\n"
+                  "no:")
+            start_game()
+
+        elif race in answer_E:
+            global RACE_FIVE
+            RACE_FIVE = "Human"
+            print(f"you have chosen a {RACE_FIVE} called {character_name}""\n"
+                  "\n"
+                  "Humans stand anywhere from 5 to 7 ft tall and rule"
+                  " Potentia. They are the most dominant race of all and"
+                  " they are the only race able to use Soul magic but"
+                  " it is completely forbidden.\n"
+                  "\n"
+                  "Humans are known to use many types of weapons and"
+                  " magics, the only magic that is their own is Soul magic\n"
+                  "\n")
+            time.sleep(2)
+            print(f"Do you want to play a {RACE_FIVE} called {character_name}?"
+                  "\n"
+                  "yes:\n"
+                  "no:")
+            start_game()
+
+        elif race in answer_F:
+            global RACE_SIX
+            RACE_SIX = "Arratoi"
+            print(f"you have chosen a {RACE_SIX} called {character_name}""\n"
+                  "\n"
+                  "The Arratoi are a race of ratlike people standing at 6 ft\n"
+                  "tall They study martial arts in thier home to the South,\n"
+                  "inside a mountian. They have even developed a magic based\n"
+                  "on martial arts known as Martial magic. But thier most\n"
+                  "dangerous magic is thier teleportation magic as it allows\n"
+                  "for instant travel but is incredibly hard to learn\n"
+                  "\n"
+                  "The Arratoi use martial arts, Terra,\n"
+                  "Teleportation and Martial magic\n"
+                  "\n")
+            time.sleep(2)
+            print(f"Do you want to play a {RACE_SIX} called {character_name} ?"
+                  "\n"
+                  "yes:\n"
+                  "no:")
+            start_game()
+
+        elif race in answer_G:
+            global RACE_SEVEN
+            RACE_SEVEN = "Fulger"
+            print(f"you have chosen a {RACE_SEVEN} called {character_name}""\n"
+                  "\n"
+                  "The Fulger are a wolflike people that stand at 9ft tall\n"
+                  "They are incredible fighters and use a magic called\n"
+                  "Beasthood to increase thier senses and physical trait\n"
+                  "to ridiculous heights. They live in a city, surrounded\n"
+                  "by permanent lighning storm. The Fulger get thier\n"
+                  "name from the electrical magic they use known as\n"
+                  "Fulgeration magic. Fulger can draw power from a\n"
+                  "storm and are immune to electrical attacks"
+                  "\n"
+                  "Fulger use metal claws, Fulgeration and Beasthood magic\n"
+                  "\n")
+            time.sleep(2)
+            print(f"Do you want to play a {RACE_SEVEN}"
+                  f" called {character_name}?"
+                  "\n"
+                  "yes:\n"
+                  "no:")
+            start_game()
+
+        else:
+            print("\n"
+                  "Please enter a valid Race choice.\n"
+                  "\n")
+            race = input("choose your race...\n"
+                         "A: Vahser\n"
+                         "B: Mortem\n"
+                         "C: Bascula\n"
+                         "D: Hemmel\n"
+                         "E: Human\n"
+                         "F: Arratoi\n"
+                         "G: Fulger\n"
+                         "\n"
+                         ">>> ")
