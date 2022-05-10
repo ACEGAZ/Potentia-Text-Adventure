@@ -649,3 +649,23 @@ def start_menu():
                          "G: Fulger\n"
                          "\n"
                          ">>> ")
+
+
+def start_game():
+    """
+    Asks if user is ready to start the game with chosen name
+    """
+    choice = input(">>>  ")
+    if choice in yes:
+        time.sleep(2)
+        print("\n")
+        time.sleep(2)
+        story_part_1()
+    elif choice in no:
+        time.sleep(2)
+        start_menu()
+    else:
+        print(f"invalid input. Please type {yes} or {no}"
+              "\n")
+        time.sleep(4)
+        start_game()
