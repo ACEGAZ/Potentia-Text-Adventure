@@ -833,3 +833,37 @@ def option_share():
           "\n")
     time.sleep(2)
     story_part_2()
+
+
+def option_lie():
+    """
+    option to lie to sailor
+    """
+    print("You lie to the salior and tell him your flask is just water\n"
+          "The sailor looks ominously at the flask and tries to snatch it!"
+          "\n"
+          "What will you do?\n"
+          "A: Fight the sailor?\n"
+          "B: Throw the flask overboard?"
+          )
+    choice = input(">>>  \n"
+                   "\n")
+
+    while True:
+        if choice in answer_A:
+            print("You decide to fight the sailor and charge at him!")
+            combat_encounter()
+            time.sleep(2)
+            story_part_2()
+        elif choice in answer_B:
+            print("You throw the flask overboard. The sailor, desprate\n"
+                  "for a drink jumps in after the flask\n"
+                  "\n"
+                  "The rest of your trip is very peaceful and you arrive\n"
+                  "at the docks. You begin walking to your friends house.\n"
+                  "\n")
+            time.sleep(2)
+            story_part_2()
+        else:
+            print("Please select a valid choice.")
+            choice = input(">>> ")
