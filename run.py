@@ -47,6 +47,7 @@ ENEMY_HEALTH = 8
 MELEE_DAMAGE = 2
 MAGIK_DAMAGE = 3
 
+
 def reset_race():
     """
     resets race to false and used when game is restarted
@@ -65,3 +66,35 @@ def reset_race():
     RACE_SIX = False
     global RACE_SEVEN
     RACE_SEVEN = False
+
+
+def reduce_enemy_health_melee():
+    """
+    reduces enemy health by 2
+    """
+    global ENEMY_HEALTH
+    ENEMY_HEALTH -= MELEE_DAMAGE
+
+
+def reduce_player_health_melee():
+    """
+    reduces player health by 2
+    """
+    global PLAYER_HEALTH
+    PLAYER_HEALTH -= MELEE_DAMAGE
+
+
+def reduce_enemy_health_magic():
+    """
+    reduces enemy health by 3
+    """
+    global ENEMY_HEALTH
+    ENEMY_HEALTH -= MAGIK_DAMAGE
+
+
+def reduce_player_health_magic():
+    """
+    reduces player health by 3
+    """
+    global PLAYER_HEALTH
+    PLAYER_HEALTH -= MAGIK_DAMAGE
