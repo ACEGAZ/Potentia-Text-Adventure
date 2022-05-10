@@ -1207,3 +1207,21 @@ def read_bloody_note():
         else:
             print("Please select a vaild choice.")
             choice = input(">>> ")
+
+
+def find_gaurd():
+    """
+    function to allow player to find a gaurd
+    and then be captured.
+    """
+    print("You run out the door as fast as\n"
+          "you can to find a gaurd, but as you\n"
+          "open the front door a group of\n"
+          "military miltia are standing in\n"
+          "front of you. They see the body behind\n"
+          "you and quickly arrest you.\n"
+          "A bag is thrown over your head\n"
+          "and you are taken away.\n"
+          "\n")
+    time.sleep(2)
+    option_capture()
