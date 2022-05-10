@@ -378,3 +378,57 @@ def combat_encounter():
             print("You Died!")
             time.sleep(2)
             start_menu()
+
+
+def combat_encounter_capture_or_escape():
+    """
+    runs combat until enemy or player health is zero.
+    if the player loses the capture option will play,
+    and if the player wins story part 3 will play.
+    """
+    global PLAYER_HEALTH
+    global ENEMY_HEALTH
+    while ENEMY_HEALTH > 0 or PLAYER_HEALTH > 0:
+        print("A: melee attack\n"
+              "B: magic attack\n")
+        choice = input(">>>  ")
+        if choice in answer_A:
+            player_attack_roll()
+            player_melee_combat()
+            time.sleep(2)
+        elif choice in answer_B:
+            player_magic_roll()
+            player_magic_combat()
+            time.sleep(2)
+        else:
+            print("Please enter a valid input\n")
+            time.sleep(2)
+            combat_encounter()
+
+        if ENEMY_HEALTH > 0:
+            enemy_attack_roll()
+            enemy_magic_roll()
+            enemy_attack_choice_roll()
+            enemy_attack_choice()
+        elif ENEMY_HEALTH <= 0:
+            print("You defeated Razik!\n")
+            time.sleep(2)
+            PLAYER_HEALTH = 10
+            ENEMY_HEALTH = 8
+            print("Your hit points have been restored.\n"
+                  f"You have {PLAYER_HEALTH} hit points\n"
+                  "\n"
+                  "You over power Razik! He falls to\n"
+                  "the ground! You are no longer being\n"
+                  "pursued.\n"
+                  "\n")
+            story_part_3()
+
+        if PLAYER_HEALTH <= 0:
+            print("Razik manages to overpower you!\n"
+                  "You fall to the floor, barely conscious.\n"
+                  "\n")
+            time.sleep(2)
+            PLAYER_HEALTH = 10
+            ENEMY_HEALTH = 8
+            option_capture()
