@@ -820,3 +820,16 @@ def option_punch():
           " house.\n"
           "\n")
     story_part_2()
+
+
+def option_share():
+    """
+    option share with sailor
+    """
+    print("You offer to share what's in your flask. The sailor smiles and"
+          " begins drinking with you. You wake up the next day on Jatorri"
+          " city docks.\n"
+          "You feel a very hungover and decide to walk to your friends house\n"
+          "\n")
+    time.sleep(2)
+    story_part_2()
