@@ -332,3 +332,49 @@ def enemy_attack_choice():
         enemy_melee_combat()
     elif enemy_attack_choice_roll() >= 5:
         enemy_magic_combat()
+
+
+def combat_encounter():
+    """
+    runs combat until enemy or player is dead
+    """
+    global PLAYER_HEALTH
+    global ENEMY_HEALTH
+    while ENEMY_HEALTH > 0 or PLAYER_HEALTH > 0:
+        print("A: melee attack\n"
+              "B: magic attack\n")
+        choice = input(">>>  ")
+        if choice in answer_A:
+            player_attack_roll()
+            player_melee_combat()
+            time.sleep(2)
+        elif choice in answer_B:
+            player_magic_roll()
+            player_magic_combat()
+            time.sleep(2)
+        else:
+            print("Please enter a valid input\n")
+            time.sleep(2)
+            combat_encounter()
+
+        if ENEMY_HEALTH > 0:
+            enemy_attack_roll()
+            enemy_magic_roll()
+            enemy_attack_choice_roll()
+            enemy_attack_choice()
+        elif ENEMY_HEALTH <= 0:
+            print("You defeated the " + enemy + "\n")
+            time.sleep(2)
+            PLAYER_HEALTH = 10
+            ENEMY_HEALTH = 8
+            print("Your hit points have been restored.\n"
+                  f"You have {PLAYER_HEALTH} hit points\n"
+                  "\n")
+            break
+
+        if PLAYER_HEALTH <= 0:
+            PLAYER_HEALTH = 10
+            ENEMY_HEALTH = 8
+            print("You Died!")
+            time.sleep(2)
+            start_menu()
