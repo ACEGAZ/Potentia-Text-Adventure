@@ -179,3 +179,86 @@ def player_melee_combat():
                   "points left.\n")
         else:
             print("You missed\n")
+
+
+def player_magic_roll():
+    """
+    returns a random number between 1 and 6 for player magic attack
+    """
+    while True:
+        player_magic = random.randint(1, 6)
+        return player_magic
+
+
+def player_magic_combat():
+    """
+    player magic combat engine for game
+    """
+    if RACE_ONE:
+        if player_magic_roll() >= 5:
+            reduce_enemy_health_magic()
+            print("You send a jet of water flying at the " + enemy.name +
+                  " and hit!\n"
+                  " The " + enemy.name + f" has {ENEMY_HEALTH} hit\n"
+                  "points left.\n")
+        else:
+            print("Your Aqua magic misses\n")
+
+    elif RACE_TWO:
+        if player_magic_roll() >= 5:
+            reduce_enemy_health_magic()
+            print("You send shards of ice flying at the " + enemy.name +
+                  " and hit!\n"
+                  "The " + enemy.name + f" has {ENEMY_HEALTH} hit\n"
+                  "points left.\n")
+        else:
+            print("Your Cryo magic misses\n")
+
+    elif RACE_THREE:
+        if player_magic_roll() >= 5:
+            reduce_enemy_health_magic()
+            print("You send a fireball flying at the " + enemy.name +
+                  " and hit!\n"
+                  "The " + enemy.name + f" has {ENEMY_HEALTH} hit\n"
+                  "points left.\n")
+        else:
+            print("Your Pyro magic misses\n")
+
+    elif RACE_FOUR:
+        if player_magic_roll() >= 5:
+            reduce_enemy_health_magic()
+            print("You send a blast of wind towards the " + enemy.name +
+                  " and hit!\n"
+                  "The " + enemy.name + f" has {ENEMY_HEALTH} hit\n"
+                  " points left.\n")
+        else:
+            print("Your zephyr magic misses\n")
+
+    elif RACE_FIVE:
+        if player_magic_roll() >= 5:
+            reduce_enemy_health_magic()
+            print("You drain some of the " + enemy.name + "soul!"
+                  "The " + enemy.name + f" has {ENEMY_HEALTH} hit\n"
+                  "points left.\n")
+        else:
+            print("Your Soul magic misses\n")
+
+    elif RACE_SIX:
+        if player_magic_roll() >= 5:
+            reduce_enemy_health_magic()
+            print("You send a chunk of rock flying towards the "
+                  + enemy.name + " and hit!\n"
+                  "The " + enemy.name + f" has {ENEMY_HEALTH} hit\n"
+                  "points left.\n")
+        else:
+            print("Your Terra magic misses\n")
+
+    elif RACE_SEVEN:
+        if player_magic_roll() >= 5:
+            reduce_enemy_health_magic()
+            print("You send a bolt of lightning flying at the " + enemy.name +
+                  " and hit!\n"
+                  "The " + enemy.name + f" has {ENEMY_HEALTH} hit\n"
+                  "points left.\n")
+        else:
+            print("Your Fulgeration magic misses\n")
