@@ -1225,3 +1225,310 @@ def find_gaurd():
           "\n")
     time.sleep(2)
     option_capture()
+
+
+def option_capture():
+    """
+    function if player is captured.
+    """
+    global PLAYER_HEALTH
+    print("A bag is thrown over your head.\n"
+          "\n")
+    time.sleep(2)
+    print("You are taken to an unkown location.\n"
+          "and placed in a secure room.\n"
+          "Your hands are chained and you can\n"
+          "feel that your magic is being blocked\n"
+          "somehow.\n"
+          "\n")
+    time.sleep(2)
+    print("The door opens and a beautiful Vahser woman steps\n"
+          "through. She sits across from you and in a\n"
+          "menacing voice says 'I'm going to ask you\n"
+          "some questions and you're going to answer.\n"
+          "them. Because if you don't it will be...\n"
+          "painfull.'\n"
+          "\n"
+          "Are you the Jatorri city slayer?\n"
+          "\n"
+          "What will you do?\n"
+          "\n"
+          "A: Tell her your're not the slayer?\n"
+          "B: Tell her Your're not answering any questions?\n"
+          "C: Spit in her face!?")
+
+    choice = input(">>> ")
+
+    while True:
+        if choice in answer_A:
+            print("You tell her that you're not the slayer.\n"
+                  "She looks at you and says 'I believe you.\n"
+                  "You look far too stupid to be the real slayer.\n"
+                  "\n"
+                  "So... who are you?'\n"
+                  "\n"
+                  "A: Tell her who you are?\n"
+                  "B: Tell her you're nobody?\n"
+                  "C: Spit in her face?")
+            choice = input(">>> ")
+            while True:
+                if choice in answer_A:
+                    print(f"You tell her your name is {character_name}\n"
+                          "and that you were just here visiting your\n"
+                          "friend.\n"
+                          "\n")
+                    time.sleep(2)
+                    print("The woman then asks 'So say I were to\n"
+                          "release you, what would you do next?\n"
+                          "\n"
+                          "A: Find the Slayer?\n"
+                          "B: Go home, you've had enough of this place?")
+                    choice = input(">>> ")
+
+                    while True:
+
+                        if choice in answer_A:
+                            print("You tell her you are going to find the\n"
+                                  "Slayer and make him pay for killing\n"
+                                  "your friend!")
+                            time.sleep(2)
+                            print("The woman smiles and says 'Good!\n"
+                                  "I was hoping you'd say that. My\n"
+                                  "name is Harika and I work for the\n"
+                                  "The Council of Strazar. We oversee\n"
+                                  "Everything in Potentia. I'm willing\n"
+                                  "to let yo go on this little vengance\n"
+                                  "quest. Anything that causes the Slayer\n"
+                                  "a problem is good for us.")
+                            time.sleep(2)
+                            print("Harika signals a gaurd\n"
+                                  "and he unchains you\n"
+                                  "Harika says 'there, you're free to go\n"
+                                  "\n"
+                                  "Some advise, the slayer often leaves a\n"
+                                  "a calling card which goads the reader\n"
+                                  "into going to the place where\n"
+                                  "light is born.\n"
+                                  "\n"
+                                  "Any idiot could tell you that, that would\n"
+                                  "be the Vatra tower but we've searched and\n"
+                                  "found nothing. I trust you'll have more\n"
+                                  "luck. Good hunting!\n"
+                                  "\n")
+                            story_part_3()
+                        elif choice in answer_B:
+                            print("You tell the woman you're sick of this\n"
+                                  "city and just want to leave. The woman\n"
+                                  "says 'How disappointing.\n"
+                                  "But we can't have\n"
+                                  "word of the Slayer getting out. I'm\n"
+                                  "afraid you'll have to stay here.\n"
+                                  "\n")
+                            time.sleep(2)
+                            print("You're taken to a cell and left to rot\n")
+                            time.sleep(2)
+                            print("You died!")
+                            time.sleep(2)
+                            start_menu()
+                        else:
+                            print("Please select a valid choice\n")
+                            choice = input(">>> ")
+
+                elif choice in answer_B:
+                    print("You tell her you're nobody and was just\n"
+                          "in the wrong place at the wrong time\n"
+                          "\n")
+                    time.sleep(2)
+                    print("The woman stands and pulls a knife from her\n"
+                          "hip and slowly stabs it into your hand.\n"
+                          "\n"
+                          "The knife digs into your hand!")
+                    PLAYER_HEALTH = 8
+                    print(f"You have {PLAYER_HEALTH} hit points left\n"
+                          "\n"
+                          "The woman asks again. Who are you?\n"
+                          "\n"
+                          "A: Tell her who you are?\n"
+                          "B: Spit in her face?")
+                    choice = input(">>> ")
+
+                    while True:
+                        if choice in answer_A:
+                            print("You tell her your name is\n"
+                                  f"{character_name}\n"
+                                  "and that you were just here visiting your\n"
+                                  "friend.\n"
+                                  "\n")
+                            time.sleep(2)
+                            print("The woman then asks 'So say I were to\n"
+                                  "release you, what would you do next?\n"
+                                  "\n"
+                                  "A: Find the Slayer?\n"
+                                  "B: Go home.\n"
+                                  "You've had enough of this place?\n")
+                            choice = input(">>> ")
+                            while True:
+                                if choice in answer_A:
+                                    print("You tell her you are going to\n"
+                                          "find the Slayer and make\n"
+                                          "him pay for killing\n"
+                                          "your friend!\n"
+                                          "\n")
+                                    time.sleep(2)
+                                    print("The woman smiles and says 'Good!\n"
+                                          "I was hoping you'd say that. My\n"
+                                          "name is Harika and I work for the\n"
+                                          "The Council of Strazar.\n"
+                                          "We oversee\n"
+                                          "Everything in Potentia.\n"
+                                          "I'm willing\n"
+                                          "to let yo go on this\n"
+                                          "little vengance\n"
+                                          "quest. Anything that causes the\n"
+                                          "Slayer a problem is good for us.")
+                                    time.sleep(2)
+                                    print("Harika signals a gaurd and\n"
+                                          "he unchains you\n"
+                                          "Harika says 'there, you're \n"
+                                          "free to go good hunting!\n"
+                                          "\n")
+                                    story_part_3()
+                                elif choice in answer_B:
+                                    print("You tell the woman you're sick\n"
+                                          "of this city and just want\n"
+                                          "to leave. The woman\n"
+                                          "says 'How disappointing. But we\n"
+                                          "can't have word of the Slayer\n"
+                                          "getting out. I'm\n"
+                                          " afraid you'll have to stay here.\n"
+                                          "\n")
+                                    time.sleep(2)
+                                    print("You're taken to a cell and left\n"
+                                          "to rot\n")
+                                    time.sleep(2)
+                                    print("You died!")
+                                    time.sleep(2)
+                                    start_menu()
+                                else:
+                                    print("Please select a valid choice\n")
+                                    choice = input(">>> ")
+
+                        elif choice in answer_B:
+                            print("You spit in her face!\n"
+                                  "The woman pulls a knife from her hip and\n"
+                                  "stabs you in the throat!!!\n")
+                            time.sleep(2)
+                            print("You died!\n"
+                                  "\n")
+                            PLAYER_HEALTH = 10
+                            start_menu()
+                        else:
+                            print("Please select a valid choice?\n")
+                            choice = input(">>> ")
+
+                elif choice in answer_C:
+                    print("You spit in her face!\n"
+                          "The woman pulls a knife from her hip and\n"
+                          "stabs you in the throat!!!\n")
+                    time.sleep(2)
+                    print("You died!\n"
+                          "\n")
+                    PLAYER_HEALTH = 10
+                    start_menu()
+                else:
+                    print("Please select a valid choice?\n")
+                    choice = input(">>> ")
+
+        elif choice in answer_B:
+            print("You refuse to answer any questions.\n"
+                  "The woman stands and pulls a knife from her\n"
+                  "hip and slowly stabs it into your hand.\n"
+                  "\n"
+                  "The knife digs into your hand!")
+            PLAYER_HEALTH = 8
+            print(f"You have {PLAYER_HEALTH} hit points left\n"
+                  "\n"
+                  "The woman asks again. Who are you?\n"
+                  "\n"
+                  "A: Tell her who you are?\n"
+                  "B: Spit in her face?")
+
+            choice = input(">>> ")
+            while True:
+
+                if choice in answer_A:
+                    print(f"You tell her your name is {character_name}\n"
+                          "and that you were just here visiting your\n"
+                          "friend.\n"
+                          "\n")
+                    time.sleep(2)
+                    print("The woman then asks 'So say I were to\n"
+                          "release you, what would you do next?\n"
+                          "\n"
+                          "A: Find the Slayer?\n"
+                          "B: Go home, you've had enough of this place?")
+                    choice = input(">>> ")
+
+                    while True:
+                        if choice in answer_A:
+                            print("You tell her you are going to find the\n"
+                                  "Slayer and make him pay for killing\n"
+                                  "your friend!\n"
+                                  "\n")
+                            time.sleep(2)
+                            print("The woman smiles and says 'Good!\n"
+                                  "I was hoping you'd say that. My\n"
+                                  "name is Harika and I work for the\n"
+                                  "The Council of Strazar. We oversee\n"
+                                  "Everything in Potentia. I'm willing\n"
+                                  "to let yo go on this little vengance\n"
+                                  "quest. Anything that causes the Slayer\n"
+                                  "a problem is good for us.")
+                            time.sleep(2)
+                            print("Harika signals a gaurd and he unchains\n"
+                                  "you. Harika says 'there, you're \n"
+                                  "free to go, good hunting!")
+                            story_part_3()
+                        elif choice in answer_B:
+                            print("You tell the woman you're sick of this\n"
+                                  "city and just want to leave. The woman\n"
+                                  "says 'How disappointing. But we can't\n"
+                                  "have word of the Slayer getting out.\n"
+                                  "I'm afraid you'll have to stay here.\n"
+                                  "\n")
+                            time.sleep(2)
+                            print("You're taken to a cell and left to rot\n")
+                            time.sleep(2)
+                            print("You died!")
+                            time.sleep(2)
+                            start_menu()
+                        else:
+                            print("Please select a valid choice\n")
+                            choice = input(">>> ")
+
+                elif choice in answer_B:
+                    print("You spit in her face!\n"
+                          "The woman pulls a knife from her hip and\n"
+                          "stabs you in the throat!!!\n")
+                    time.sleep(2)
+                    print("You died!\n"
+                          "\n")
+                    PLAYER_HEALTH = 10
+                    start_menu()
+                else:
+                    print("Please select a valid choice?\n")
+                    choice = input(">>> ")
+
+        elif choice in answer_C:
+            print("You spit in her face!\n"
+                  "The woman pulls a knife from her hip and\n"
+                  "stabs you in the throat!!!\n")
+            time.sleep(2)
+            print("You died!\n"
+                  "\n")
+            PLAYER_HEALTH = 10
+            start_menu()
+
+        else:
+            print("Please select a valid choice?\n")
+            choice = input(">>> ")
