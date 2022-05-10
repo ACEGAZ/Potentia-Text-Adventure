@@ -262,3 +262,29 @@ def player_magic_combat():
                   "points left.\n")
         else:
             print("Your Fulgeration magic misses\n")
+
+
+def enemy_attack_roll():
+    """
+    returns a random number between 1 and 6 for enemy melee attack
+    """
+    while True:
+        enemy_attack = random.randint(1, 6)
+        return enemy_attack
+
+
+def enemy_melee_combat():
+    """
+    enemy melee combat engine for game
+    """
+
+    print("The " + enemy.name + " tries to melee attack you\n")
+    time.sleep(2)
+    if enemy_attack_roll() >= 3:
+        reduce_player_health_melee()
+        print("The " + enemy.name + " hit you with a melee attack!"
+              f" You have {PLAYER_HEALTH} hit points left""\n")
+        time.sleep(2)
+    else:
+        print("The " + enemy.name + " missed you with its melee attack\n")
+        time.sleep(2)
