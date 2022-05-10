@@ -799,3 +799,24 @@ def story_part_1():
         else:
             print("Please select a vaild choice.")
             choice = input(">>> ")
+
+
+def option_punch():
+    """
+    Starts a combat encounter
+    """
+    print("You punch that sailor square in his face and knock out his\n"
+          "last tooth!\n"
+          "\n"
+          "He gets up and charges at you.\n"
+          "\n"
+          "Time to fight!\n"
+          "\n")
+    combat_encounter()
+    print("\n You drop the sailor but get thrown in the brig for fighting.\n"
+          "The next day you are tossed onto the docks\n"
+          "\n"
+          "Feeling a little beat up you begin to walk towards your friends"
+          " house.\n"
+          "\n")
+    story_part_2()
