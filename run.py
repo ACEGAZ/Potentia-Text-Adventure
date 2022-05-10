@@ -1076,3 +1076,134 @@ def option_search():
         else:
             print(f"Please type {yes} or {no}.\n")
             choice = input(">>> ")
+
+
+def read_bloody_note():
+    """
+    function to allow player to read the bloody note
+    and then either escape or be captured.
+    """
+    print("You peel the note from Tesloras' body\n"
+          "and begin to read. The note reads.\n"
+          "\n"
+          "ANY WHO WORK FOR OR UNDER THE COUNCIL\n"
+          "SHALL FALL VICTIM TO THE JATORRI CITY\n"
+          "SLAYER! NO ONE AND NOTHING CAN STOP ME!\n"
+          "\n"
+          "IF YOU WISH TO STOP ME YOU'RE WELCOME TO\n"
+          "TRY. YOU WILL FIND ME WHERE LIGHT IS BORN.")
+    time.sleep(2)
+    print("As you finish reading the note you hear\n"
+          "a commotion from outside!\n"
+          "\n"
+          "What do you do?\n"
+          "A: Hide?\n"
+          "B: Run?\n"
+          "C: Special Race option")
+    if RACE_ONE:
+        print("Vahser: Use your Shadow magic to hide."
+              "\n")
+    elif RACE_TWO:
+        print("Mortem: Use your Sensory magic to try and locate\n"
+              "the best way out.\n"
+              "\n")
+    elif RACE_THREE:
+        print("Bascula: Use your Hardening magic to harden your.\n"
+              "body and try to break down a wall and escape."
+              "\n")
+    elif RACE_FOUR:
+        print("Hemmel: Use your creation magic to try and fabricate a\n"
+              "wall to hide behind."
+              "\n")
+    elif RACE_FIVE:
+        print("Human: Use your Soul magic to try and make yourself\n"
+              "ethereal and pass through the building."
+              "\n")
+    elif RACE_SIX:
+        print("Arratoi: Use your teleportation magic to try to\n"
+              "teleport out of the building."
+              "\n")
+    elif RACE_SEVEN:
+        print("Fulger: Activate your Beasthood magic to increase\n"
+              "your. strength and try to tear your way out of\n"
+              "the building."
+              "\n")
+
+    choice = input(">>> ")
+
+    while True:
+
+        if choice in answer_A:
+            print("You hide in a nearby cupboard. The military\n"
+                  "breaksthrough The door and begins seraching \n"
+                  "the house. It doesnt take long before you are\n"
+                  "found. You are bound and taken away"
+                  "\n")
+            time.sleep(2)
+            option_capture()
+        elif choice in answer_B:
+            print("You run out the back door! You can hear\n"
+                  "The front door burst open as you flee the\n"
+                  "scene but you manage to escape\n"
+                  "\n")
+            time.sleep(2)
+            option_escape()
+        elif RACE_ONE and choice in answer_C:
+            print("You surround yourself in shadows and become\n"
+                  "completely invisible. You watch as the\n"
+                  "military pour into the house and find\n"
+                  "the body. You take this chance to escape.\n"
+                  "\n")
+            time.sleep(2)
+            option_escape()
+        elif RACE_TWO and choice in answer_C:
+            print("You begin scanning the house with your\n"
+                  "Sensory magic and discover a secret\n"
+                  "passage under the house. You run to\n"
+                  "The basement and escape.\n"
+                  "\n")
+            time.sleep(2)
+            option_escape()
+        elif RACE_THREE and choice in answer_C:
+            print("You Harden your body and smash through\n"
+                  "A wall! it makes a lot of noise and\n"
+                  "military hear and chase you.\n"
+                  "They manage to capture you.\n"
+                  "\n")
+            time.sleep(2)
+            option_capture()
+        elif RACE_FOUR and choice in answer_C:
+            print("You make a wall in front of you.\n"
+                  "The military don't suspect anything\n"
+                  "but you are stuck! Eventually your magic\n"
+                  "runs out and you are discovered and taken\n"
+                  "away.\n"
+                  "\n")
+            time.sleep(2)
+            option_capture()
+        elif RACE_FIVE and choice in answer_C:
+            print("You try to use Soul magic to become\n"
+                  "ethereal but it is a very high level\n"
+                  "form of magic that takes time.\n"
+                  "unfortunatly, you are not fast enough\n"
+                  "and you are taken by the Military.\n"
+                  "\n")
+            time.sleep(2)
+            option_capture()
+        elif RACE_SIX and choice in answer_C:
+            print("You easily teleport a small distance\n"
+                  "Away from the house and escape.\n"
+                  "\n")
+            time.sleep(2)
+            option_escape()
+        elif RACE_SEVEN and choice in answer_C:
+            print("You increase your strength and start\n"
+                  "tearing through the building.\n"
+                  "But you are not able to get through\n"
+                  "the wall before the military captures you.\n"
+                  "\n")
+            time.sleep(2)
+            option_capture()
+        else:
+            print("Please select a vaild choice.")
+            choice = input(">>> ")
