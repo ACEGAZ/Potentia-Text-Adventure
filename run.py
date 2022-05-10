@@ -1674,3 +1674,119 @@ def option_escape():
         else:
             print("Please select a valid choice?")
             choice = input(">>> ")
+
+
+def story_part_3():
+    """
+    function to start the third part of the story.
+    """
+    global enemy
+    enemy = Enemy("Slayer")
+
+    print("Now that you're not being persued you\n"
+          "can begin your search for the Slayer.\n"
+          "\n"
+          "You begin your search by heading to\n"
+          "Vatra tower. You search the tower for\n"
+          "hours but find nothing.\n"
+          "\n")
+    time.sleep(2)
+    print("Suddenly you feel a pull towards a door\n"
+          "in the tower. You go towards the door and\n"
+          "can't stop yourself from reaching out.\n"
+          "You touch the door and symbols begin to\n"
+          "circle around you. The symbols are a\n"
+          "series of numbers and letters which read\n"
+          "\n"
+          "14 = N\n"
+          "N - 13\n"
+          "N - 10\n"
+          "D - 3\n"
+          "A + N + 3\n"
+          "D + A\n"
+          "R - D\n"
+          "\n")
+    print("You hear a voice in your head that\n"
+          "tells you to speak the\n"
+          "word it wants to hear.\n"
+          "\n"
+          "What do you say to the door?\n")
+
+    choice = input(">>> ")
+    while True:
+        if choice in PASSWORD:
+            print("\n"
+                  "You say the word 'Nadaren' and\n"
+                  "the door begins to distort and you\n"
+                  "are sucked through a dimensional\n"
+                  "space.")
+            time.sleep(2)
+            print("You find yourself in a large chamber\n"
+                  "\n"
+                  "There is a masked person standing in the\n"
+                  "room with you who says\n"
+                  f"'Welcome {character_name}. you have no idea\n"
+                  "how long i've been waiting for you.\n"
+                  "There's something special about you\n"
+                  f"{character_name}. Only a master in\n"
+                  "the art of magic can get to this place\n"
+                  "... a master or a Nadaren! You, you\n"
+                  "possess an incredible power! The power\n"
+                  "to level an entire continent!\n"
+                  "But your power is not been yet realised.\n"
+                  "\n"
+                  f"So, will you join me {character_name}?'\n"
+                  "\n"
+                  "Yes:\n"
+                  "No:\n")
+            choice = input(">>> ")
+            while True:
+                if choice in yes:
+                    print("You accept the masked strangers offer\n"
+                          "\n"
+                          "The stranger pulls takes off thier mask\n"
+                          "to reveal the face of your friend, Teslora\n"
+                          "She says 'I'm sorry for the deceit,\n"
+                          f"{character_name} but I had to fake my\n"
+                          "death to throw off the council. I used\n"
+                          "the body of the last council member I\n"
+                          "killed and used Soul magic to change thier\n"
+                          "appearance to look like me.\n"
+                          "\n"
+                          "The council would have killed\n"
+                          "you if they knew what\n"
+                          "you were. I acted as the Slayer to take\n"
+                          "down council members and draw you too me\n"
+                          "\n"
+                          "Now, together we can destroy the rulers of\n"
+                          "this world!\n"
+                          "\n")
+                    end()
+                elif choice in no:
+                    print("You refuse the strangers offer.\n"
+                          "\n"
+                          "They look at you and say 'Well, if\n"
+                          "you're not with me then you're against\n"
+                          "me! and the Slayer can't have you falling\n"
+                          "into the Councils hands!\n"
+                          "\n"
+                          "The Slayer runs at you to attack!!!\n"
+                          "\n")
+                    combat_encounter()
+                    print("You defeat the Slayer. The Slayer lies\n"
+                          "on the ground in a pool of blood.\n"
+                          "You walk up to the lifeless body and\n"
+                          "take off the Slayers mask to reveal\n"
+                          "the face of Teslora. You struggle to\n"
+                          "understand how she can be alive but\n"
+                          "you will now never have the answers\n"
+                          "\n"
+                          "You leave your friend and leave to disover\n"
+                          "what a Nadaren is.")
+                    end()
+                else:
+                    print(f"Please type {yes} or {no}.\n")
+                    choice = input(">>> ")
+        else:
+            print("Please type the correct word.")
+            choice = input(">>> ")
