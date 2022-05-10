@@ -669,3 +669,133 @@ def start_game():
               "\n")
         time.sleep(4)
         start_game()
+
+
+def story_part_1():
+    """
+    function to start the playthrough
+    """
+
+    time.sleep(1)
+
+    print("You wake up on a ship, sailing towards the Human city of Jatorri\n"
+          "A friend of yours named Teslora lives there\n"
+          "and you are going to visit her.\n"
+          "Suddenly, a drunken human\n"
+          "approches you and says 'Hello,\n"
+          "Mate. I need a drink and you've got that hip flask.\n"
+          "give it er!'\n"
+          "\n"
+          "what will you do?\n"
+          "\n"
+          "A: Punch him in his gap toothed face?\n"
+          "B: Share your flask with him?\n"
+          "C: Tell him the flask is full of water?\n"
+          "D: Special Race options\n")
+    if RACE_ONE:
+        print("Vahser: Use seduction.")
+
+    elif RACE_TWO:
+        print("Mortem: Reveal your undead face to scare him.\n"
+              "\n")
+
+    elif RACE_THREE:
+        print("Bascula: intimidate him with your large size.\n"
+              "\n")
+
+    elif RACE_FOUR:
+        print("Hemmel: Bore him with a long, detailed explination.\n"
+              "\n")
+
+    elif RACE_FIVE:
+        print("Human: Point out another human with a bigger flask.\n"
+              "\n")
+
+    elif RACE_SIX:
+        print("Arratoi: Hit him with a martial arts blow to knock him out.\n"
+              "\n")
+
+    elif RACE_SEVEN:
+        print("Fulger: Surround your body with lightning and growl.\n"
+              "\n")
+
+    choice = input(">>> ")
+
+    while True:
+        if choice in answer_A:
+            option_punch()
+        elif choice in answer_B:
+            option_share()
+        elif choice in answer_C:
+            option_lie()
+        elif RACE_ONE and choice in answer_D:
+            print("You speak softly and tell the sailor you are young"
+                  "and innocent.\n"
+                  "You bat your eyelids and ask that he please leave such an"
+                  " innocent creature be\n"
+                  "The sailor sees sense and walks away\n"
+                  "\n"
+                  "You arrive at the docks and walk towards your\n"
+                  "friends house.")
+            time.sleep(2)
+            story_part_2()
+        elif RACE_TWO and choice in answer_D:
+            print("You pull down the cloth covering and reveal your face.\n"
+                  "The sailor sees the black sockets where your eyes should\n"
+                  "be. He turns white and passes out.\n"
+                  "\n"
+                  "You arrive at the docks and walk towards your\n"
+                  "friends house.")
+            time.sleep(2)
+            story_part_2()
+
+        elif RACE_THREE and choice in answer_D:
+            print("You look down on the tiny Human and tell him to walk away!"
+                  " The sailor quickly turns tail and runs\n"
+                  "\n"
+                  "You arrive at the docks and walk towards your\n"
+                  "friends house.")
+            time.sleep(2)
+            story_part_2()
+
+        elif RACE_FOUR and choice in answer_D:
+            print("You begin tell the sailor why alcohol is bad for him and"
+                  " and explain in explicit detail how alcohol is made"
+                  " The sailor falls asleep whilst you're talking\n"
+                  "\n"
+                  "You arrive at the docks and walk towards\n"
+                  "your friends house\n")
+            time.sleep(2)
+            story_part_2()
+        elif RACE_FIVE and choice in answer_D:
+            print("You point the sailor towards a man with a flask\n"
+                  "twice the size\n"
+                  " of yours. The sailor quickly heads over to bother\n"
+                  "the man."
+                  "\n"
+                  "You arrive at the docks and walk towards\n"
+                  "your friends house\n")
+            time.sleep(2)
+            story_part_2()
+        elif RACE_SIX and choice in answer_D:
+            print("Before the sailor can say another\n"
+                  "word you deliver a swift\n"
+                  "punch in the solar plexus which knocks him unconscious\n"
+                  "\n"
+                  "You arrive at the docks and walk towards.\n"
+                  "your friends house.\n")
+            time.sleep(2)
+            story_part_2()
+        elif RACE_SEVEN and choice in answer_D:
+            print("Lightning begins to crackel from your body and arc out.\n"
+                  "You stare at the sailor and let out a guttural growl.\n"
+                  "The sailor leaves without saying another word.\n"
+                  "\n"
+                  "You arrive at the docks and walk towards your\n"
+                  "friends house.\n")
+            time.sleep(2)
+            story_part_2()
+
+        else:
+            print("Please select a vaild choice.")
+            choice = input(">>> ")
