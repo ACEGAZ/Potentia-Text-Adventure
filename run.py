@@ -46,3 +46,22 @@ ENEMY_HEALTH = 8
 
 MELEE_DAMAGE = 2
 MAGIK_DAMAGE = 3
+
+def reset_race():
+    """
+    resets race to false and used when game is restarted
+    """
+    global RACE_ONE
+    RACE_ONE = False
+    global RACE_TWO
+    RACE_TWO = False
+    global RACE_THREE
+    RACE_THREE = False
+    global RACE_FOUR
+    RACE_FOUR = False
+    global RACE_FIVE
+    RACE_FIVE = False
+    global RACE_SIX
+    RACE_SIX = False
+    global RACE_SEVEN
+    RACE_SEVEN = False
