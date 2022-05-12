@@ -9,6 +9,7 @@ class Enemy:
     def __init__(self, name):
         self.name = name
 
+
 # Used in part 3 when the player must enter the correct word
 PASSWORD = ["Nadaren",
             "nadaren",
