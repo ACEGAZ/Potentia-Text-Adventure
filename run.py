@@ -340,7 +340,7 @@ def combat_encounter():
     while ENEMY_HEALTH > 0 or PLAYER_HEALTH > 0:
         print("A: melee attack\n"
               "B: magic attack\n")
-        choice = input(">>>  ")
+        choice = input(">>>  \n")
         if choice in answer_A:
             player_attack_roll()
             player_melee_combat()
@@ -388,7 +388,7 @@ def combat_encounter_capture_or_escape():
     while ENEMY_HEALTH > 0 or PLAYER_HEALTH > 0:
         print("A: melee attack\n"
               "B: magic attack\n")
-        choice = input(">>>  ")
+        choice = input(">>>  \n")
         if choice in answer_A:
             player_attack_roll()
             player_melee_combat()
@@ -467,7 +467,7 @@ def start_menu():
                  )
 
     global character_name
-    character_name = input("Please name your character>>> ")
+    character_name = input("Please name your character>>> \n")
 
     while True:
 
@@ -652,7 +652,7 @@ def start_game():
     """
     Asks if user is ready to start the game with chosen name
     """
-    choice = input(">>>  ")
+    choice = input(">>>  \n")
     if choice in yes:
         time.sleep(2)
         print("\n")
@@ -717,7 +717,7 @@ def story_part_1():
         print("Fulger: Surround your body with lightning and growl.\n"
               "\n")
 
-    choice = input(">>> ")
+    choice = input(">>> \n")
 
     while True:
         if choice in answer_A:
@@ -796,7 +796,7 @@ def story_part_1():
 
         else:
             print("Please select a vaild choice.")
-            choice = input(">>> ")
+            choice = input(">>> \n")
 
 
 def option_punch():
@@ -864,7 +864,7 @@ def option_lie():
             story_part_2()
         else:
             print("Please select a valid choice.")
-            choice = input(">>> ")
+            choice = input(">>> \n")
 
 
 def story_part_2():
@@ -897,7 +897,7 @@ def story_part_2():
           "B: Read the bloody note?\n"
           "C: Find a member of the Jatorri city gaurd to report a murder?\n")
 
-    choice = input(">>> ")
+    choice = input(">>> \n")
 
     while True:
         if choice in answer_A:
@@ -908,7 +908,7 @@ def story_part_2():
             find_gaurd()
         else:
             print("Please select a valid choice.")
-            choice = input(">>> ")
+            choice = input(">>> \n")
 
 
 def option_search():
@@ -942,7 +942,7 @@ def option_search():
           "\n"
           "yes?\n"
           "No?")
-    choice = input(">>> ")
+    choice = input(">>> \n")
 
     while True:
 
@@ -995,7 +995,7 @@ def option_search():
                       "the building."
                       "\n")
 
-            choice = input(">>> ")
+            choice = input(">>> \n")
             while True:
                 if choice in answer_A:
                     print("You hide in a nearby cupboard. The military\n"
@@ -1070,10 +1070,10 @@ def option_search():
                     option_capture()
                 else:
                     print("Please select a vaild choice.")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
         else:
             print(f"Please type {yes} or {no}.\n")
-            choice = input(">>> ")
+            choice = input(">>> \n")
 
 
 def read_bloody_note():
@@ -1127,7 +1127,7 @@ def read_bloody_note():
               "the building."
               "\n")
 
-    choice = input(">>> ")
+    choice = input(">>> \n")
 
     while True:
 
@@ -1204,7 +1204,7 @@ def read_bloody_note():
             option_capture()
         else:
             print("Please select a vaild choice.")
-            choice = input(">>> ")
+            choice = input(">>> \n")
 
 
 def find_gaurd():
@@ -1255,7 +1255,7 @@ def option_capture():
           "B: Tell her Your're not answering any questions?\n"
           "C: Spit in her face!?\n")
 
-    choice = input(">>> ")
+    choice = input(">>> \n")
 
     while True:
         if choice in answer_A:
@@ -1268,7 +1268,7 @@ def option_capture():
                   "A: Tell her who you are?\n"
                   "B: Tell her you're nobody?\n"
                   "C: Spit in her face?")
-            choice = input(">>> ")
+            choice = input(">>> \n")
             while True:
                 if choice in answer_A:
                     print(f"You tell her your name is {character_name}\n"
@@ -1281,7 +1281,7 @@ def option_capture():
                           "\n"
                           "A: Find the Slayer?\n"
                           "B: Go home, you've had enough of this place?")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
 
                     while True:
 
@@ -1330,7 +1330,7 @@ def option_capture():
                             start_menu()
                         else:
                             print("Please select a valid choice\n")
-                            choice = input(">>> ")
+                            choice = input(">>> \n")
 
                 elif choice in answer_B:
                     print("You tell her you're nobody and was just\n"
@@ -1348,7 +1348,7 @@ def option_capture():
                           "\n"
                           "A: Tell her who you are?\n"
                           "B: Spit in her face?")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
 
                     while True:
                         if choice in answer_A:
@@ -1364,7 +1364,7 @@ def option_capture():
                                   "A: Find the Slayer?\n"
                                   "B: Go home.\n"
                                   "You've had enough of this place?\n")
-                            choice = input(">>> ")
+                            choice = input(">>> \n")
                             while True:
                                 if choice in answer_A:
                                     print("You tell her you are going to\n"
@@ -1409,7 +1409,7 @@ def option_capture():
                                     start_menu()
                                 else:
                                     print("Please select a valid choice\n")
-                                    choice = input(">>> ")
+                                    choice = input(">>> \n")
 
                         elif choice in answer_B:
                             print("You spit in her face!\n"
@@ -1422,7 +1422,7 @@ def option_capture():
                             start_menu()
                         else:
                             print("Please select a valid choice?\n")
-                            choice = input(">>> ")
+                            choice = input(">>> \n")
 
                 elif choice in answer_C:
                     print("\n"
@@ -1436,7 +1436,7 @@ def option_capture():
                     start_menu()
                 else:
                     print("Please select a valid choice?\n")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
 
         elif choice in answer_B:
             print("You refuse to answer any questions.\n"
@@ -1452,7 +1452,7 @@ def option_capture():
                   "A: Tell her who you are?\n"
                   "B: Spit in her face?")
 
-            choice = input(">>> ")
+            choice = input(">>> \n")
             while True:
 
                 if choice in answer_A:
@@ -1466,7 +1466,7 @@ def option_capture():
                           "\n"
                           "A: Find the Slayer?\n"
                           "B: Go home, you've had enough of this place?")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
 
                     while True:
                         if choice in answer_A:
@@ -1503,7 +1503,7 @@ def option_capture():
                             start_menu()
                         else:
                             print("Please select a valid choice\n")
-                            choice = input(">>> ")
+                            choice = input(">>> \n")
 
                 elif choice in answer_B:
                     print("You spit in her face!\n"
@@ -1516,7 +1516,7 @@ def option_capture():
                     start_menu()
                 else:
                     print("Please select a valid choice?\n")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
 
         elif choice in answer_C:
             print("You spit in her face!\n"
@@ -1530,7 +1530,7 @@ def option_capture():
 
         else:
             print("Please select a valid choice?\n")
-            choice = input(">>> ")
+            choice = input(">>> \n")
 
 
 def option_escape():
@@ -1546,7 +1546,7 @@ def option_escape():
           "What do you do\n"
           "A: Take to the rooftops?\n"
           "B: Head for the back alleys?")
-    choice = input(">>> ")
+    choice = input(">>> \n")
 
     while True:
         if choice in answer_A:
@@ -1560,7 +1560,7 @@ def option_escape():
                   "Yes:\n"
                   "No:\n"
                   "\n")
-            choice = input(">>> ")
+            choice = input(">>> \n")
             while True:
                 if choice in yes:
                     time.sleep(2)
@@ -1577,7 +1577,7 @@ def option_escape():
                           "A: Stop and fight the soldier?\n"
                           "B: Jump the 20 ft drop to the street below?\n"
                           "\n")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
                     while True:
 
                         if choice in answer_A:
@@ -1594,7 +1594,7 @@ def option_escape():
                             story_part_3()
                         else:
                             print("Please select a valid choice")
-                            choice = input(">>> ")
+                            choice = input(">>> \n")
 
                 elif choice in no:
                     time.sleep(2)
@@ -1606,7 +1606,7 @@ def option_escape():
 
                 else:
                     print(f"Please type {yes} or {no}.\n")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
 
         elif choice in answer_B:
             print("You head into the back alleys.\n"
@@ -1617,7 +1617,7 @@ def option_escape():
                   "A: Go left?\n"
                   "B: Go right?\n"
                   "\n")
-            choice = input(">>> ")
+            choice = input(">>> \n")
             while True:
                 if choice in answer_A:
                     print("You take the left path.\n"
@@ -1642,7 +1642,7 @@ def option_escape():
                           "A: Shake the bridge?\n"
                           "B: Carry on running?\n"
                           "\n")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
                     while True:
                         if choice in answer_A:
                             print("You shake the bridge from left\n"
@@ -1665,14 +1665,14 @@ def option_escape():
                             option_capture()
                         else:
                             print("Please select a valid choice")
-                        choice = input(">>> ")
+                        choice = input(">>> \n")
 
                 else:
                     print("Please select a valid choice")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
         else:
             print("Please select a valid choice?")
-            choice = input(">>> ")
+            choice = input(">>> \n")
 
 
 def story_part_3():
@@ -1711,7 +1711,7 @@ def story_part_3():
           "\n"
           "What do you say to the door?\n")
 
-    choice = input(">>> ")
+    choice = input(">>> \n")
     while True:
         if choice in PASSWORD:
             print("\n"
@@ -1738,7 +1738,7 @@ def story_part_3():
                   "\n"
                   "Yes:\n"
                   "No:\n")
-            choice = input(">>> ")
+            choice = input(">>> \n")
             while True:
                 if choice in yes:
                     print("You accept the masked strangers offer\n"
@@ -1785,10 +1785,10 @@ def story_part_3():
                     end()
                 else:
                     print(f"Please type {yes} or {no}.\n")
-                    choice = input(">>> ")
+                    choice = input(">>> \n")
         else:
             print("Please type the correct word.")
-            choice = input(">>> ")
+            choice = input(">>> \n")
 
 
 def end():
