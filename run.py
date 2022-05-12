@@ -9,9 +9,6 @@ class Enemy:
     def __init__(self, name):
         self.name = name
 
-
-enemy = Enemy("Sailor")
-
 # Used in part 3 when the player must enter the correct word
 PASSWORD = ["Nadaren",
             "nadaren",
@@ -363,7 +360,7 @@ def combat_encounter():
             enemy_attack_choice_roll()
             enemy_attack_choice()
         elif ENEMY_HEALTH <= 0:
-            print("You defeated the " + enemy + "\n")
+            print("You defeated the " + enemy.name + "\n")
             time.sleep(2)
             PLAYER_HEALTH = 10
             ENEMY_HEALTH = 8
@@ -675,7 +672,8 @@ def story_part_1():
     """
     function to start the playthrough
     """
-
+    global enemy
+    enemy = Enemy("Sailor")
     time.sleep(1)
 
     print("You wake up on a ship, sailing towards the Human city of Jatorri\n"
@@ -1255,7 +1253,7 @@ def option_capture():
           "\n"
           "A: Tell her your're not the slayer?\n"
           "B: Tell her Your're not answering any questions?\n"
-          "C: Spit in her face!?")
+          "C: Spit in her face!?\n")
 
     choice = input(">>> ")
 
@@ -1427,7 +1425,8 @@ def option_capture():
                             choice = input(">>> ")
 
                 elif choice in answer_C:
-                    print("You spit in her face!\n"
+                    print("\n"
+                          "You spit in her face!\n"
                           "The woman pulls a knife from her hip and\n"
                           "stabs you in the throat!!!\n")
                     time.sleep(2)
@@ -1814,6 +1813,7 @@ def end():
           "\n"
           "Thanks for playing.\n"
           "\n")
+    time.sleep(4)
     start_menu()
 
 
