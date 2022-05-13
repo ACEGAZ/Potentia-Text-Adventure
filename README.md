@@ -1,31 +1,83 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Potentia Text Adventure
 
-Welcome ACEGAZ,
+## Introduction
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Potentia text adventure is a text based game that allows the player to make decisions and change how the story plays.
+Potentia takes its inspiration from role playing games and other text adventures from the late 1970's and 1980's.
+The world, races and lore of Potentia are all my own design and are inspired by Dungeons & Dragons table top Role Playing games.
 
-## Reminders
+A: B: C: D: E: F: G: and yes or no are used for the player to make decisions and progress through the game.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+Potentia runs in the terminal and uses the code institute template terminal to run in a browser, using Heroku as a hosting platform.
 
-## Creating the Heroku app
+![Recording 2022-05-13 at 09 24 36](https://user-images.githubusercontent.com/97246895/168243359-e47a3cd8-e527-493d-bd55-458863e2cbf0.gif)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Goals
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+The main goal of Potentia is to give players a fun experience and to generate intrest in the world and its lore. 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+The second goal was to make a playable game using python.
 
-Connect your GitHub repository and deploy as normal.
+## logic flow
 
-## Constraints
+I created a flow chart using lucid chart to show the flow of the game and display how each decision will play out.  
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+![Potentia text adventure](https://user-images.githubusercontent.com/97246895/168243401-03dbaeae-6cfc-45e4-ab81-e6bb658932af.png)
 
------
-Happy coding!
+## Features 
+
+### Race Selection
+
+Potentia starts with a race selection, allowing the player to select from 7 different races. 
+Each race has unique options for certain situations and unique text when engaged in combat.
+
+### Character name
+
+The player is able to name their character whatever they want and their character name will be referenced in parts of the story.
+
+### decisions
+
+Players are able to make decisions that influence how the story plays and what ending the player will see. 
+
+## Deployment 
+
+initially Potentia Text Adventure was going to be deployed using Heroku to connect to Github but this feature has been removed from heroku.
+instead it was deployed by using the command heroku login -i and loging in when prompted. Then running the command heroku create Potentia-Text_adventure to create a new app. This created a new Heroku app and linked it to my Gitpod terminal. Then I set up config vars and build packs on Heroku. 
+I used heroku/python and heroku/nodejs buildpacks. 
+
+## Testing 
+
+Potentia was tested by a small group of people, including myself. The game was played many times and all feedback was taken and most problems were solved as they 
+were discovered.
+
+Once Potentia was hosted on Heroku a link was sent on a messenger chat and each menmber of the chat was able to message me with any issues that they found. 
+
+## Bugs
+
+The only significant bug is enemies skipping thier turn during combat. Unfortunatly, I did not have the time to fix this but will be looking to fix it in a future update. 
+
+## technologies used
+
+Python was primarily used for Potentia and I imported the time and random libraries. 
+
+The Time library was used to pause the game to create the illusion that the enemy was attacking and to allow the player more time to read. 
+
+The Random library was used to return random numbers for player and enemy attacks. 
+
+## Future updates
+
+I would like to include a complete magic system for utility based magics, such as healing spells. these spells would allow the player to heal during combat.
+
+I would also like to include an experience system were players gain experience (XP) which will increase their power and health. 
+
+## Credits
+
+The intial design concept and layout was taken from Derik Shidler
+link: https://www.derekshidler.com/how-to-create-a-text-based-adventure-and-quiz-game-in-python/
+
+The flow chart was designed using lucid charts
+Link: https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20charts&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=aud-381457345638:kwd-64262996435&km_CPC_Country=9045120&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQjwg_iTBhDrARIsAD3Ib5iJyyR9mzZprdpM9iO9WOfNZS838_JDlskIPm7LKLOwXn1s64vfEx4aAjUsEALw_wcB
+
+
+
