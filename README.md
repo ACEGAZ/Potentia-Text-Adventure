@@ -65,7 +65,7 @@ Players are able to make decisions that influence how the story plays and what e
 
 The last section of the game features a puzzle for the player to complete. The puzzle is a series of numbers that equate to letters in the alphabet, A = 1, B = 2, ect.
 
-Here is the puzzle as displayed in the game. The solution is the word Nadaren which can be spelled in all lowercase, all uppercase or with the fist letter capitalized.
+Here is the puzzle as displayed in the game. The solution is the word Nadaren which can be spelled in all lowercase, all uppercase or with the first letter capitalized.
 
 * 14 = N
 * N - 13
@@ -123,3 +123,13 @@ link: https://www.derekshidler.com/how-to-create-a-text-based-adventure-and-quiz
 
 The flow chart was designed using lucid charts
 Link: https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20charts&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=aud-381457345638:kwd-64262996435&km_CPC_Country=9045120&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQjwg_iTBhDrARIsAD3Ib5iJyyR9mzZprdpM9iO9WOfNZS838_JDlskIPm7LKLOwXn1s64vfEx4aAjUsEALw_wcB
+
+### Testers 
+
+* Rachel Lowles
+* Charlotte Aling-Case
+* lysette Reed
+* Aaron Harvey
+* Dale Millward
+* Natalie March
+* Emma Skinner\
