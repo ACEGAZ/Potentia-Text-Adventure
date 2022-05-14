@@ -15,7 +15,7 @@ Potentia runs in the terminal and uses the code institute template terminal to r
 
 ## Goals
 
-The main goal of Potentia is to give players a fun experience and to generate intrest in the world and its lore. 
+The main goal of Potentia is to give players a fun experience with decision based outcomes and the option of combat and to generate intrest in the world and its lore. 
 
 The second goal was to make a playable game using python.
 
@@ -23,6 +23,9 @@ The second goal was to make a playable game using python.
 
 I created a flow chart using lucid chart to show the flow of the game and display how each decision will play out.
 Once a decision has been made the terminal will print the next part of the story for the player to make a new choice. 
+
+The player must make a decision before the game will continue, if an incorrect input is made the the player will be prompted to select a valid input.
+The game will not continue until a valid input is selected. 
 
 ![Potentia text adventure](https://user-images.githubusercontent.com/97246895/168243401-03dbaeae-6cfc-45e4-ab81-e6bb658932af.png)
 
@@ -45,13 +48,13 @@ Each race has unique options for certain situations and unique text when engaged
 
 Races include:
 
-Vahser
-Mortem
-Bascula
-Hemmel
-Human
-Arratoi
-Fulger
+* Vahser
+* Mortem
+* Bascula
+* Hemmel
+* Human
+* Arratoi
+* Fulger
 
 ### Character name
 
@@ -80,7 +83,9 @@ Here is the puzzle as displayed in the game. The solution is the word Nadaren wh
 Potentia is deployed on Heroku and can be found here: https://potenta-text-adventure.herokuapp.com/
 
 initially Potentia Text Adventure was going to be deployed using Heroku to connect to Github but this feature has been removed from heroku.
-instead it was deployed by using the command heroku login -i and loging in when prompted. Then running the command heroku create Potentia-Text_adventure to create a new app. This created a new Heroku app and linked it to my Gitpod terminal. Then I set up config vars and build packs on Heroku. 
+
+instead it was deployed by using the command heroku login -i in the terminal and loging in when prompted. Then running the command heroku create Potentia-Text-adventure to create a new app. This created a new Heroku app and linked it to my Gitpod terminal. Then I set up config vars and build packs on Heroku. 
+
 I used heroku/python and heroku/nodejs buildpacks. 
 
 ## Testing 
@@ -132,4 +137,4 @@ Link: https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&
 * Aaron Harvey
 * Dale Millward
 * Natalie March
-* Emma Skinner\
+* Emma Skinner
