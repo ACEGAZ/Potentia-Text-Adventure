@@ -67,13 +67,13 @@ The last section of the game features a puzzle for the player to complete. The p
 
 Here is the puzzle as displayed in the game. The solution is the word Nadaren which can be spelled in all lowercase, all uppercase or with the fist letter capitalized.
 
-14 = N
-N - 13
-N - 10
-D - 3
-A + N + 3
-D + A
-R - D
+* 14 = N
+* N - 13
+* N - 10
+* D - 3
+* A + N + 3
+* D + A
+* R - D
 
 ## Deployment 
 
